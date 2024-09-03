@@ -8,11 +8,24 @@
 
 /* nav link style started here  */
 @layer components{
+/* common css started here*/
+.common-input{
+  @apply border-none outline-none ;
+}
+/* common css ended here */
+
+
+
+
+
 .nav-link {
   @apply font-Dm-Sans  text-[14px] font-normal  leading-normal capitalize text-gray  ;
 }
 .active-nav-link{
   @apply font-Dm-Sans  text-[14px] font-bold leading-normal  capitalize text-black;
+}
+.para-one{
+  @apply font-Dm-Sans  text-[14px] font-normal  leading-normal  text-black  ;
 }
 }
 

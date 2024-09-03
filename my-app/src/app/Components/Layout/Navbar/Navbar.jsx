@@ -2,6 +2,11 @@
 import React, { useEffect, useState } from "react";
 import Img from "../../Tags/Img/Image";
 import { useRouter } from "next/navigation";
+import Paragraph from "../../Tags/Paragraph/Paragraph";
+import Bar from "../../../../Images/bar.png";
+import { FaSearch } from "react-icons/fa";
+import { FaUserCheck } from "react-icons/fa";
+import { IoCartSharp } from "react-icons/io5";
 
 const Navbar = () => {
   const router = useRouter();
@@ -12,7 +17,7 @@ const Navbar = () => {
   });
 
   const hanldeRootRoute = () => {
-    alert("i'm working")
+    alert("i'm working");
     router.push("/");
   };
 
@@ -45,8 +50,32 @@ const Navbar = () => {
           </li>
         </ul>
       </nav>
-      <div className=" w-full h-[100px] bg-offWhite px-[160px] ">
-        hello world
+      <div className=" w-full h-[100px] bg-offWhite px-[160px] flex flex-row items-center gap-x-[407px] ">
+        <div className=" flex flex-row gap-x-[355px]">
+          <div className="flex flex-row items-center gap-x-[10.71px] ">
+            <Img
+              alt={"toggle bar"}
+              height={9}
+              width={18}
+              className={"h-[9.469px] w-[18.26px]"}
+              src={Bar}
+            />
+            <Paragraph text={"Shop by Category"} className={"para-one"} />
+          </div>
+          <form className="relative w-[601px] h-[50px] flex bg-white items-center ">
+            <FaSearch className="absolute right-0 mr-[17.03px]  " />
+            <input
+              type="search"
+              className=" h-full w-full common-input pl-[21px] para-one  text-[#C4C4C4] pr-[40px] "
+              placeholder="Search Products"
+            />
+          </form>
+        </div>
+        <div className=" flex flex-row gap-10 ">
+          <FaUserCheck className="[&svg]:h-[15.411px] [&svg]:w-[33px]" />
+          <IoCartSharp className="[&svg]:h-[15.411px] [&svg]:w-[33px]" />
+        </div>
+        
       </div>
     </section>
   );
