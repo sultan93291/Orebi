@@ -7,6 +7,8 @@ import Bar from "../../../../Images/bar.png";
 import { FaSearch } from "react-icons/fa";
 import { FaUserCheck } from "react-icons/fa";
 import { IoCartSharp } from "react-icons/io5";
+import { useFormik } from "formik";
+
 
 const Navbar = () => {
   const router = useRouter();
@@ -20,6 +22,19 @@ const Navbar = () => {
     alert("i'm working");
     router.push("/");
   };
+
+  const initialValue = {
+    search: "",
+  };
+  const formik = useFormik({
+    initialValues: initialValue,
+    onSubmit: (values, actions) => {
+      console.log(values.search);
+      actions.resetForm({
+        values: initialValue,
+      });
+    },
+  });
 
   return (
     <section className="flex flex-col w-auto h-[180px] relative   items-center justify-center ">
@@ -68,6 +83,9 @@ const Navbar = () => {
               type="search"
               className=" h-full w-full common-input pl-[21px] para-one  text-[#C4C4C4] pr-[40px] "
               placeholder="Search Products"
+              name="search"
+              onChange={formik.handleChange}
+              value={formik.values.search}
             />
           </form>
         </div>
@@ -75,7 +93,6 @@ const Navbar = () => {
           <FaUserCheck className="[&svg]:h-[15.411px] [&svg]:w-[33px]" />
           <IoCartSharp className="[&svg]:h-[15.411px] [&svg]:w-[33px]" />
         </div>
-        
       </div>
     </section>
   );

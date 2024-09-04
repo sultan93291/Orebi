@@ -1,7 +1,7 @@
 import React from "react";
 
-const Heading = ({ Heading, className, text }) => {
-  return <Heading className={className}>{text}</Heading>;
+const Heading = ({ Variant, className, text }) => {
+  return <Variant className={className}>{text}</Variant>;
 };
 
 export default Heading;
