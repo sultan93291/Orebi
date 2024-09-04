@@ -18,13 +18,22 @@
   @apply border-none outline-none ;
 }
 .para-one{
-  @apply font-Dm-Sans  text-[14px] font-normal  leading-normal  text-black  ;
+  @apply font-Dm-Sans  text-sm font-normal  leading-normal  text-black  ;
 }
 .para-two{
-  @apply font-Dm-Sans  text-[14px] font-normal  leading-[23px] capitalize text-gray  ;
+  @apply font-Dm-Sans  text-sm font-normal  leading-[23px] capitalize text-gray  ;
 }
 .heding-six{
   @apply text-base font-Dm-Sans font-bold leading-[27px] text-black capitalize
+}
+.heading-one{
+  @apply font-Dm-Sans text-[200px] font-bold text-black
+}
+.para-three{
+  @apply font-Dm-Sans  text-[16px] font-normal  leading-[30px] text-lightBlack  ;
+}
+.common-btn{
+  @apply  bg-black text-white capitalize text-center font-bold text-sm font-Dm-Sans 
 }
 /* common css ended here */
 

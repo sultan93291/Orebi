@@ -23,6 +23,8 @@ module.exports = {
         gray: "#6D6D6D",
         white: "#fff",
         black: "#262626",
+        lightBlack: "#767676",
+        lightWhite: "#F0F0F0",
       },
       fontFamily: {
         "Dm-Sans": '"DM Sans", sans-serif',
