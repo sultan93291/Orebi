@@ -30,10 +30,16 @@
   @apply font-Dm-Sans text-[200px] font-bold text-black
 }
 .para-three{
-  @apply font-Dm-Sans  text-[16px] font-normal  leading-[30px] text-lightBlack  ;
+  @apply font-Dm-Sans  text-base font-normal  leading-[30px] text-lightBlack  ;
 }
 .common-btn{
   @apply  bg-black text-white capitalize text-center font-bold text-sm font-Dm-Sans 
+}
+.para-four{
+  @apply font-Dm-Sans  text-base font-normal  text-lightBlack  ;
+}
+.heading-four{
+  @apply font-Dm-Sans text-[20px] font-bold text-black
 }
 /* common css ended here */
 
