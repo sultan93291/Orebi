@@ -1,9 +1,17 @@
-import React from 'react'
+import React from "react";
+import Heading from "../Heading/Heading";
 
-const Paragraph = ({className,text}) => {
+const Paragraph = ({
+  className,
+  text,
+
+}) => {
   return (
-    <p className={className}> {text} </p>
-  )
-}
+    <p className={className}>
+      {" "}
+      {text} 
+    </p>
+  );
+};
 
-export default Paragraph
+export default Paragraph;

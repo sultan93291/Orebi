@@ -41,6 +41,12 @@
 .heading-four{
   @apply font-Dm-Sans text-[20px] font-bold text-black
 }
+.heading-two{
+  @apply text-[49px] font-bold font-Dm-Sans text-black  capitalize
+}
+.heading-three{
+  @apply text-[40px] font-bold font-Dm-Sans text-black  
+}
 /* common css ended here */
 
 /* navbar design started here*/
