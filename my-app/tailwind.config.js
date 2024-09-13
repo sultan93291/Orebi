@@ -26,6 +26,7 @@ module.exports = {
         lightBlack: "#767676",
         lightWhite: "#F0F0F0",
         sliderBtnColor: "rgba(0, 0, 0, 0.20)",
+        creamWhite: "#F3F3F3",
       },
       fontFamily: {
         "Dm-Sans": '"DM Sans", sans-serif',
