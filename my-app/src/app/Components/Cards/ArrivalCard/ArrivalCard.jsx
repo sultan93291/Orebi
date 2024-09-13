@@ -7,11 +7,25 @@ import { FaHeart } from "react-icons/fa";
 import { IoGitCompareOutline } from "react-icons/io5";
 import { IoCart } from "react-icons/io5";
 
-const ArrivalCard = ({ imgSrc, headingTxt, subheading, paraTxt, btnTxt }) => {
+const ArrivalCard = ({
+  imgSrc,
+  headingTxt,
+  subheading,
+  paraTxt,
+  btnTxt,
+  width,
+  height,
+}) => {
   return (
     <div className="flex flex-col gap-y-6 w-[370px]   ">
       <div className="relative h-[370px] w-[370px] group   ">
-        <Img src={imgSrc} alt={"not found"} className={"h-full w-full"} />
+        <Img
+          src={imgSrc}
+          width={width ? width : 376}
+          height={height ? height : 376}
+          alt={"not found"}
+          className={"h-full w-full"}
+        />
         <Button
           text={btnTxt ? btnTxt : "new"}
           className={

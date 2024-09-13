@@ -60,10 +60,10 @@ const DownToUpSlider = () => {
   return (
     <div
       ref={containerRef}
-      className="h-[617px] w-full overflow-y-scroll  relative"
+      className="h-[677px] w-full overflow-y-scroll  relative"
     >
       {["green", "blue", "red", "yellow"].map((color, index) => (
-        <div className="flex flex-col">
+        <div className="flex flex-col" key={index}>
           <div
             key={index}
             className={`h-[597px] bg-[url('/banner.png')]  w-full  relative shadow-banner_shadow bg-cover bg-no-repeat bg-center   `}
