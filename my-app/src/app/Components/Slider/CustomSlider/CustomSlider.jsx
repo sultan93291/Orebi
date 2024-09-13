@@ -1,34 +1,38 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Heading from "../../Tags/Heading/Heading";
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import Button from "../../Tags/Button/Button";
 import ArrivalCard from "../../Cards/ArrivalCard/ArrivalCard";
 
-const CustomSlider = ({ slides , heading }) => {
+const CustomSlider = ({ slides, heading }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentSlide, setCurrenSlide] = useState([]);
+
+  const itemsPerSlide = 4;
+
+  useEffect(() => {
+    setCurrenSlide(slides.slice(0, itemsPerSlide));
+  }, [slides]);
 
   // Next slide function
   const nextSlide = () => {
-    setCurrentIndex(prevIndex =>
-      prevIndex === slides.length - 1 ? 0 : prevIndex + 1
-    );
+    const nextIndex = (currentIndex + itemsPerSlide) % slides.length;
+    setCurrenSlide(slides.slice(nextIndex, nextIndex + itemsPerSlide));
+    setCurrentIndex(nextIndex);
   };
 
   // Previous slide function
   const prevSlide = () => {
-    setCurrentIndex(prevIndex =>
-      prevIndex === 0 ? slides.length - 1 : prevIndex - 1
-    );
+    const prevIndex =
+      (currentIndex - itemsPerSlide + slides.length) % slides.length;
+    setCurrenSlide(slides.slice(prevIndex, prevIndex + itemsPerSlide));
+    setCurrentIndex(prevIndex);
   };
   return (
     <div className=" flex flex-col gap-y-[48px] w-full pl-[184px] pr-[130px] h-auto relative ">
-      <Heading
-        text={"New Arrivals"}
-        Variant={"h2"}
-        className={"headign-five"}
-      />
+      <Heading text={heading} Variant={"h2"} className={"headign-five"} />
       <div className="flex flex-row gap-x-10 pb-[163px] z-0 relative w-full  ">
         <div className="flex flex-row justify-between absolute top-0 left-0 w-full mt-[153px]   z-10 ">
           <Button
@@ -46,8 +50,16 @@ const CustomSlider = ({ slides , heading }) => {
             }
           />
         </div>
-        {slides.map((item, index) => {
-          return <ArrivalCard imgSrc={item.src} />;
+        {currentSlide.map((item, index) => {
+          return (
+            <ArrivalCard
+              imgSrc={item.src}
+              btnTxt={item.btnTxt}
+              headingTxt={item.heading}
+              subheading={item.subHeading}
+              paraTxt={item.title}
+            />
+          );
         })}
       </div>
     </div>
