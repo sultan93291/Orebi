@@ -36,6 +36,9 @@ const slides = [
   },
 ];
 
-export const Arrival = () => {
+const Arrival = () => {
   return <CustomSlider slides={slides} heading={"New Arrivals"} />;
 };
+
+
+export default Arrival
