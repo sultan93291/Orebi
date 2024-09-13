@@ -4,6 +4,7 @@ import Feature from "./Feature/Feature";
 import { Arrival } from "./Arrival/Arrival";
 import HotDeals from "./HotDeals/HotDeals";
 import Phone from "./Phone/Phone";
+import Offers from "./Offers/Offers";
 
 const HomePage = () => {
   return (
@@ -13,6 +14,7 @@ const HomePage = () => {
       <Arrival />
       <HotDeals />
       <Phone />
+      <Offers/>
     </>
   );
 };
