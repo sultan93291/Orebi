@@ -53,6 +53,7 @@ const CustomSlider = ({ slides, heading }) => {
         {currentSlide.map((item, index) => {
           return (
             <ArrivalCard
+              key={index}
               imgSrc={item.src}
               btnTxt={item.btnTxt}
               headingTxt={item.heading}

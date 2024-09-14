@@ -1,25 +1,24 @@
-"use client";
-import React, { useEffect, useState } from "react";
-import Img from "../../Tags/Img/Image";
-import { useRouter } from "next/navigation";
+"use client"
+import React from "react";
 import Paragraph from "../../Tags/Paragraph/Paragraph";
 import Bar from "../../../../Images/bar.png";
 import { FaSearch } from "react-icons/fa";
 import { FaUserCheck } from "react-icons/fa";
 import { IoCartSharp } from "react-icons/io5";
 import { useFormik } from "formik";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
+import Img from "../../Tags/Img/Image";
 
 
 const Navbar = () => {
   const router = useRouter();
-  const [path, setpath] = useState("");
-  useEffect(() => {
-    const path = window.location.pathname;
-    setpath(path);
-  });
+  const path = usePathname()
+  console.log(path);
+  
 
   const hanldeRootRoute = () => {
-    alert("i'm working");
     router.push("/");
   };
 
@@ -49,19 +48,31 @@ const Navbar = () => {
         />
         <ul className=" flex flex-row gap-x-[40px] ">
           <li className={`${path == "/" ? "active-nav-link" : " nav-link"} `}>
-            Home
+            <Link href={"/"}> Home</Link>
           </li>
-          <li className={`${path !== "/" ? "active-nav-link" : "nav-link"} `}>
-            shop
+          <li
+            className={`${path == "/shop" ? "active-nav-link" : "nav-link"} `}
+          >
+            <Link href={"/shop"}> shop </Link>
           </li>
-          <li className={`${path !== "/" ? "active-nav-link" : "nav-link"} `}>
-            about
+          <li
+            className={`${path == "/about" ? "active-nav-link" : "nav-link"} `}
+          >
+            <Link href={"/about"}> about</Link>
           </li>
-          <li className={`${path !== "/" ? "active-nav-link" : "nav-link"} `}>
-            contacts
+          <li
+            className={`${
+              path == "/contacts" ? "active-nav-link" : "nav-link"
+            } `}
+          >
+            <Link href={"/contacts"}> contacts</Link>
           </li>
-          <li className={`${path !== "/" ? "active-nav-link" : "nav-link"} `}>
-            journal
+          <li
+            className={`${
+              path == "/journal" ? "active-nav-link" : "nav-link"
+            } `}
+          >
+            <Link href={"/journal"}> journal</Link>
           </li>
         </ul>
       </nav>

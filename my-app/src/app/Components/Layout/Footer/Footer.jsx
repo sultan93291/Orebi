@@ -66,7 +66,7 @@ const Footer = () => {
             alt={"site logo"}
             height={28}
             width={121}
-            className={"h-[28.507px] w-[121.907px]  "}
+            className={"h-[28px] w-[121px] bg-cover  "}
           />
         </div>
       </div>
