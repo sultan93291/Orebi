@@ -59,6 +59,7 @@ const CustomSlider = ({ slides, heading }) => {
               headingTxt={item.heading}
               subheading={item.subHeading}
               paraTxt={item.title}
+              isBtn={true}
             />
           );
         })}

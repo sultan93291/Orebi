@@ -1,78 +1,79 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   height: 0;
   width: 0;
-  scroll-behavior: smooth
+  scroll-behavior: smooth;
 }
-
 
 /* nav link style started here  */
-@layer components{
-/* common css started here*/
-.common-input{
-  @apply border-none outline-none ;
-}
-.para-one{
-  @apply font-Dm-Sans  text-sm font-normal  leading-normal  text-black  ;
-}
-.para-two{
-  @apply font-Dm-Sans  text-sm font-normal  leading-[23px] capitalize text-gray  ;
-}
-.heding-six{
-  @apply text-base font-Dm-Sans font-bold leading-[27px] text-black capitalize
-}
-.heading-one{
-  @apply font-Dm-Sans text-[200px] font-bold text-black
-}
-.para-three{
-  @apply font-Dm-Sans  text-base font-normal  leading-[30px] text-lightBlack  ;
-}
-.common-btn{
-  @apply  bg-black text-white capitalize text-center font-bold text-sm font-Dm-Sans 
-}
-.para-four{
-  @apply font-Dm-Sans  text-base font-normal  text-lightBlack  ;
-}
-.heading-four{
-  @apply font-Dm-Sans text-[20px] font-bold text-black
-}
-.heading-two{
-  @apply text-[49px] font-bold font-Dm-Sans text-black  capitalize
-}
-.heading-three{
-  @apply text-[40px] font-bold font-Dm-Sans text-black  
-}
-.headign-five{
-  @apply text-[39px] font-bold font-Dm-Sans text-black  capitalize
-}
-/* common css ended here */
+@layer components {
+  /* common css started here*/
+  .common-input {
+    @apply border-none outline-none;
+  }
+  .para-one {
+    @apply font-Dm-Sans  text-sm font-normal  leading-normal  text-black;
+  }
+  .para-two {
+    @apply font-Dm-Sans  text-sm font-normal  leading-[23px] capitalize text-gray;
+  }
+  .para-three {
+    @apply font-Dm-Sans text-[12px] font-normal text-lightBlack;
+  }
+  .heding-six {
+    @apply text-base font-Dm-Sans font-bold leading-[27px] text-black capitalize;
+  }
+  .heading-one {
+    @apply font-Dm-Sans text-[200px] font-bold text-black;
+  }
+  .para-three {
+    @apply font-Dm-Sans  text-base font-normal  leading-[30px] text-lightBlack;
+  }
+  .common-btn {
+    @apply bg-black text-white capitalize text-center font-bold text-sm font-Dm-Sans;
+  }
+  .para-four {
+    @apply font-Dm-Sans  text-base font-normal  text-lightBlack;
+  }
+  .heading-four {
+    @apply font-Dm-Sans text-[20px] font-bold text-black;
+  }
+  .heading-two {
+    @apply text-[49px] font-bold font-Dm-Sans text-black  capitalize;
+  }
+  .heading-three {
+    @apply text-[40px] font-bold font-Dm-Sans text-black;
+  }
+  .headign-five {
+    @apply text-[39px] font-bold font-Dm-Sans text-black  capitalize;
+  }
+  .select-design{
+    @apply  w-full h-auto px-[21px] py-[15px] flex border-[1px] border-solid  border-[#f0f0f0] focus:outline-none appearance-none;
+  }
+  /* common css ended here */
 
-/* navbar design started here*/
-.nav-link {
-  @apply font-Dm-Sans  text-[14px] font-normal  leading-normal capitalize text-gray  ;
-}
-.active-nav-link{
-  @apply font-Dm-Sans  text-[14px] font-bold leading-normal  capitalize text-black;
-}
-/* navbar design ended here */
+  /* navbar design started here*/
+  .nav-link {
+    @apply font-Dm-Sans  text-[14px] font-normal  leading-normal capitalize text-gray;
+  }
+  .active-nav-link {
+    @apply font-Dm-Sans  text-[14px] font-bold leading-normal  capitalize text-black;
+  }
+  /* navbar design ended here */
 
-/* footer design started here*/
-.footer-nav-heading{
-@apply text-base font-Dm-Sans font-bold leading-[23px] text-black capitalize
+  /* footer design started here*/
+  .footer-nav-heading {
+    @apply text-base font-Dm-Sans font-bold leading-[23px] text-black capitalize;
+  }
+  .footer-nav-link {
+    @apply font-Dm-Sans  text-[14px] font-normal  leading-[23px] capitalize text-gray cursor-pointer;
+  }
+  /* footer design ended here */
 }
-.footer-nav-link{
-  @apply font-Dm-Sans  text-[14px] font-normal  leading-[23px] capitalize text-gray cursor-pointer  ;
-}
-/* footer design ended here */
-
-
-
-}
-
 
 /* nav link style ended here  */

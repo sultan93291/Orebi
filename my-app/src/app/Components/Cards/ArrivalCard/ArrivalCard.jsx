@@ -15,6 +15,7 @@ const ArrivalCard = ({
   btnTxt,
   width,
   height,
+  isBtn,
 }) => {
   return (
     <div className="flex flex-col gap-y-6 w-[370px]   ">
@@ -26,12 +27,14 @@ const ArrivalCard = ({
           alt={"not found"}
           className={"h-full w-full"}
         />
-        <Button
-          text={btnTxt ? btnTxt : "new"}
-          className={
-            "common-btn w-[92px] h-[35px] capitalize absolute top-0 left-0 mt-[20px] ml-[20px] "
-          }
-        />
+        {isBtn && (
+          <Button
+            text={btnTxt ? btnTxt : "new"}
+            className={
+              "common-btn w-[92px] h-[35px] capitalize absolute top-0 left-0 mt-[20px] ml-[20px] "
+            }
+          />
+        )}
         <div className="  absolute w-full py-[25px] bg-white bottom-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col gap-y-[21px] items-end pr-[30px] ">
           <div className="flex flex-row gap-x-[15px] right-0 items-center ">
             <Paragraph
